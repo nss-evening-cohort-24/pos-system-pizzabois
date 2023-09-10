@@ -1,0 +1,62 @@
+{
+  "-NdzkMwocDLNc2g9dW5a": {
+    "orderId": "",
+    "customer": "Dirk Pegg",
+    "orderStatus": false,
+    "orderType": "call-in",
+    "items": "to be changed",
+    "orderPrice": 33,
+    "paymentType": "cash",
+    "amountTipped": 34
+  },
+  "-NdzkMwpSWzq1jOpW6YQ": {
+    "orderId": "",
+    "customer": "Atalanta Bartot",
+    "orderStatus": false,
+    "orderType": "call-in",
+    "items": "to be changed",
+    "orderPrice": 94,
+    "paymentType": "credit",
+    "amountTipped": 59
+  },
+  "-NdzkMwrm8MPjs6vGnbo": {
+    "orderId": "",
+    "customer": "Granger Padgett",
+    "orderStatus": true,
+    "orderType": "mobile",
+    "items": "to be changed",
+    "orderPrice": 30,
+    "paymentType": "cash",
+    "amountTipped": 41
+  },
+  "-NdzkMwswqsOMuv1BtyD": {
+    "orderId": "",
+    "customer": "Jeddy Simeon",
+    "orderStatus": true,
+    "orderType": "mobile",
+    "items": "to be changed",
+    "orderPrice": 82,
+    "paymentType": "cash",
+    "amountTipped": 99
+  },
+  "-NdzkMwtE5aJ-bAV7F_r": {
+    "orderId": "",
+    "customer": "Kanya Bothams",
+    "orderStatus": true,
+    "orderType": "walk-in",
+    "items": "to be changed",
+    "orderPrice": 21,
+    "paymentType": "credit",
+    "amountTipped": 5
+  },
+  "-NdzkMwuRDkW1vmUFM_d": {
+    "orderId": "",
+    "customer": "Daisey Barrand",
+    "orderStatus": true,
+    "orderType": "call-in",
+    "items": "to be changed",
+    "orderPrice": 82,
+    "paymentType": "credit",
+    "amountTipped": 42
+  }
+}
