@@ -1,62 +1,56 @@
 {
-  "-NdzkMwocDLNc2g9dW5a": {
-    "orderId": "",
-    "customer": "Dirk Pegg",
-    "orderStatus": false,
-    "orderType": "call-in",
-    "items": "to be changed",
-    "orderPrice": 33,
-    "paymentType": "cash",
-    "amountTipped": 34
+  "-NdzhDpqI72kuFBDeHzh": {
+    "firebaseKey": "-NdzhDpqI72kuFBDeHzh",
+    "name": "Dirk Pegg",
+    "isClosed": true,
+    "type": "walk-in",
+    "emailAddress": "dpegg0@yellowbook.com",
+    "phoneNumber": "806-954-7371",
+    "uid": ""
   },
-  "-NdzkMwpSWzq1jOpW6YQ": {
-    "orderId": "",
-    "customer": "Atalanta Bartot",
-    "orderStatus": false,
-    "orderType": "call-in",
-    "items": "to be changed",
-    "orderPrice": 94,
-    "paymentType": "credit",
-    "amountTipped": 59
+  "-NdzhDpw0upVCMwg7O5U": {
+    "firebaseKey": "-NdzhDpw0upVCMwg7O5U",
+    "name": "Atalanta Bartot",
+    "isClosed": true,
+    "type": "call-in",
+    "emailAddress": "abartot1@netscape.com",
+    "phoneNumber": "984-363-9818",
+    "uid": ""
   },
-  "-NdzkMwrm8MPjs6vGnbo": {
-    "orderId": "",
-    "customer": "Granger Padgett",
-    "orderStatus": true,
-    "orderType": "mobile",
-    "items": "to be changed",
-    "orderPrice": 30,
-    "paymentType": "cash",
-    "amountTipped": 41
+  "-NdzhDpyH9nDi-biADYg": {
+    "firebaseKey": "-NdzhDpyH9nDi-biADYg",
+    "name": "Granger Padgett",
+    "isClosed": true,
+    "type": "walk-in",
+    "emailAddress": "gpadgett2@mozilla.com",
+    "phoneNumber": "663-387-3431",
+    "uid": ""
   },
-  "-NdzkMwswqsOMuv1BtyD": {
-    "orderId": "",
-    "customer": "Jeddy Simeon",
-    "orderStatus": true,
-    "orderType": "mobile",
-    "items": "to be changed",
-    "orderPrice": 82,
-    "paymentType": "cash",
-    "amountTipped": 99
+  "-NdzhDpz1kL7SlFoAYBP": {
+    "firebaseKey": "-NdzhDpz1kL7SlFoAYBP",
+    "name": "Jeddy Simeon",
+    "isClosed": false,
+    "type": "online",
+    "emailAddress": "jsimeon3@e-recht24.de",
+    "phoneNumber": "671-858-1431",
+    "uid": ""
   },
-  "-NdzkMwtE5aJ-bAV7F_r": {
-    "orderId": "",
-    "customer": "Kanya Bothams",
-    "orderStatus": true,
-    "orderType": "walk-in",
-    "items": "to be changed",
-    "orderPrice": 21,
-    "paymentType": "credit",
-    "amountTipped": 5
+  "-NdzhDq04tpTJJaz6-W5": {
+    "firebaseKey": "-NdzhDq04tpTJJaz6-W5",
+    "name": "Kanya Bothams",
+    "isClosed": false,
+    "type": "walk-in",
+    "emailAddress": "kbothams4@creativecommons.org",
+    "phoneNumber": "535-504-6355",
+    "uid": ""
   },
-  "-NdzkMwuRDkW1vmUFM_d": {
-    "orderId": "",
-    "customer": "Daisey Barrand",
-    "orderStatus": true,
-    "orderType": "call-in",
-    "items": "to be changed",
-    "orderPrice": 82,
-    "paymentType": "credit",
-    "amountTipped": 42
+  "-NdzhDq15CoKAgdTAC7H": {
+    "firebaseKey": "-NdzhDq15CoKAgdTAC7H",
+    "name": "Daisey Barrand",
+    "isClosed": false,
+    "type": "online",
+    "emailAddress": "dbarrand5@earthlink.net",
+    "phoneNumber": "572-318-7980",
+    "uid": ""
   }
 }
