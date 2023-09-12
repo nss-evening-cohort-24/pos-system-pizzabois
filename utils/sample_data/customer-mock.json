@@ -1,50 +1,50 @@
 {
   "-NdzhDpqI72kuFBDeHzh": {
-    "uid": "",
-    "customerName": "Dirk Pegg",
+    "firebaseKey": "-NdzhDpqI72kuFBDeHzh",
+    "name": "Dirk Pegg",
     "emailAddress": "dpegg0@yellowbook.com",
     "phoneNumber": "806-954-7371",
     "totalOrders": 602,
-    "firebaseKey": "-NdzhDpqI72kuFBDeHzh"
+    "uid": ""
   },
   "-NdzhDpw0upVCMwg7O5U": {
-    "uid": "",
-    "customerName": "Atalanta Bartot",
+    "firebaseKey": "-NdzhDpw0upVCMwg7O5U",
+    "name": "Atalanta Bartot",
     "emailAddress": "abartot1@netscape.com",
     "phoneNumber": "984-363-9818",
     "totalOrders": 428,
-    "firebaseKey": "-NdzhDpw0upVCMwg7O5U"
+    "uid": ""
   },
   "-NdzhDpyH9nDi-biADYg": {
-    "uid": "",
-    "customerName": "Granger Padgett",
+    "firebaseKey": "-NdzhDpyH9nDi-biADYg",
+    "name": "Granger Padgett",
     "emailAddress": "gpadgett2@mozilla.com",
     "phoneNumber": "663-387-3431",
     "totalOrders": 508,
-    "firebaseKey": "-NdzhDpyH9nDi-biADYg"
+    "uid": ""
   },
   "-NdzhDpz1kL7SlFoAYBP": {
-    "uid": "",
-    "customerName": "Jeddy Simeon",
+    "firebaseKey": "-NdzhDpz1kL7SlFoAYBP",
+    "name": "Jeddy Simeon",
     "emailAddress": "jsimeon3@e-recht24.de",
     "phoneNumber": "671-858-1431",
     "totalOrders": 745,
-    "firebaseKey": "-NdzhDpz1kL7SlFoAYBP"
+    "uid": ""
   },
   "-NdzhDq04tpTJJaz6-W5": {
-    "uid": "",
-    "customerName": "Kanya Bothams",
+    "firebaseKey": "-NdzhDq04tpTJJaz6-W5",
+    "name": "Kanya Bothams",
     "emailAddress": "kbothams4@creativecommons.org",
     "phoneNumber": "535-504-6355",
     "totalOrders": 239,
-    "firebaseKey": "-NdzhDq04tpTJJaz6-W5"
+    "uid": ""
   },
   "-NdzhDq15CoKAgdTAC7H": {
-    "uid": "",
-    "customerName": "Daisey Barrand",
+    "firebaseKey": "-NdzhDq15CoKAgdTAC7H",
+    "name": "Daisey Barrand",
     "emailAddress": "dbarrand5@earthlink.net",
     "phoneNumber": "572-318-7980",
     "totalOrders": 549,
-    "firebaseKey": "-NdzhDq15CoKAgdTAC7H"
+    "uid": ""
   }
 }
