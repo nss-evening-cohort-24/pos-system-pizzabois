@@ -1,14 +1,14 @@
 import domBuilder from '../components/shared/domBuilder';
 import navBar from '../components/shared/navBar';
 import domEvents from '../events/domEvents';
-import closeOrders from '../pages/closeOrders';
 import navEvents from '../events/navEvents';
+import homePage from '../pages/homePage';
 
 const startApp = (user) => {
   domBuilder(user);
   navBar();
-  closeOrders();
-  domEvents();
+  homePage(user);
+  domEvents(user);
   navEvents(user);
 };
 
