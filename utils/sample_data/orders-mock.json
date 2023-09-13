@@ -6,7 +6,7 @@
     "type": "walk-in",
     "emailAddress": "dpegg0@yellowbook.com",
     "phoneNumber": "806-954-7371",
-    "uid": ""
+    "uid": "0x2jchs4k2YXRYdme5OIawjDxRZ2"
   },
   "-NdzhDpw0upVCMwg7O5U": {
     "firebaseKey": "-NdzhDpw0upVCMwg7O5U",
@@ -15,7 +15,7 @@
     "type": "call-in",
     "emailAddress": "abartot1@netscape.com",
     "phoneNumber": "984-363-9818",
-    "uid": ""
+    "uid": "0x2jchs4k2YXRYdme5OIawjDxRZ2"
   },
   "-NdzhDpyH9nDi-biADYg": {
     "firebaseKey": "-NdzhDpyH9nDi-biADYg",
@@ -24,7 +24,7 @@
     "type": "walk-in",
     "emailAddress": "gpadgett2@mozilla.com",
     "phoneNumber": "663-387-3431",
-    "uid": ""
+    "uid": "0x2jchs4k2YXRYdme5OIawjDxRZ2"
   },
   "-NdzhDpz1kL7SlFoAYBP": {
     "firebaseKey": "-NdzhDpz1kL7SlFoAYBP",
@@ -33,7 +33,7 @@
     "type": "online",
     "emailAddress": "jsimeon3@e-recht24.de",
     "phoneNumber": "671-858-1431",
-    "uid": ""
+    "uid": "0x2jchs4k2YXRYdme5OIawjDxRZ2"
   },
   "-NdzhDq04tpTJJaz6-W5": {
     "firebaseKey": "-NdzhDq04tpTJJaz6-W5",
@@ -42,7 +42,7 @@
     "type": "walk-in",
     "emailAddress": "kbothams4@creativecommons.org",
     "phoneNumber": "535-504-6355",
-    "uid": ""
+    "uid": "0x2jchs4k2YXRYdme5OIawjDxRZ2"
   },
   "-NdzhDq15CoKAgdTAC7H": {
     "firebaseKey": "-NdzhDq15CoKAgdTAC7H",
@@ -51,6 +51,6 @@
     "type": "online",
     "emailAddress": "dbarrand5@earthlink.net",
     "phoneNumber": "572-318-7980",
-    "uid": ""
+    "uid": "0x2jchs4k2YXRYdme5OIawjDxRZ2"
   }
 }
