@@ -1,7 +1,7 @@
 // import getOrdersByUid from '../api/orders';
 import showOrders from '../pages/viewOrders';
 
-import getOrdersByUid from '../api/orders';
+import { getOrdersByUid } from '../api/orders';
 import { signOut } from '../utils/auth';
 
 const navEvents = (user) => {

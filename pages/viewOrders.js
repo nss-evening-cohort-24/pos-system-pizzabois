@@ -1,4 +1,5 @@
 import clearDom from '../utils/clearDom';
+import noOrders from '../utils/noOrders';
 import renderToDom from '../utils/renderToDom';
 
 const showOrders = (array) => {
@@ -6,7 +7,7 @@ const showOrders = (array) => {
 
   let domString = '';
   if (array.length < 1) {
-    domString = 'There are no orders';
+    noOrders();
   } else {
     array.forEach((order) => {
       domString += `
