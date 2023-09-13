@@ -20,4 +20,15 @@ const getOrdersByUid = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export default getOrdersByUid;
+const deleteOrder = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/orders/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  }).then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
+export { getOrdersByUid, deleteOrder };
