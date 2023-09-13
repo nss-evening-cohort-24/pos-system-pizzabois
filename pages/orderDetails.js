@@ -2,7 +2,7 @@ import renderToDom from '../utils/renderToDom';
 import clearDom from '../utils/clearDom';
 
 const emptyDetails = () => {
-  const domString = '<h2>No orders have been made yet!</h2>';
+  const domString = '<h2 id="no-orders-msg">No orders have been made yet!</h2>';
   renderToDom('#order-container', domString);
 };
 
@@ -33,7 +33,9 @@ const orderDetails = (array) => {
     });
   }
 
-  domString += `<h1 id="order-details-total" class="" "style="text-align:center;font-weight:bold;font-size:84px;">TOTAL: $${total.toFixed(2)}</h1>`;
+  // MAKE CONTAINER FOR TOTAL AND CONTAINER FOR VIEW ITEMS, RENDER TOTAL FROM THE ITEMS CONTAINER INTO TOTAL CONTAINER
+
+  domString += `<h1 id="order-details-total" class="mb-3" "style="text-align:center;font-weight:bold;font-size:84px;">TOTAL: $${total.toFixed(2)}</h1>`;
 
   domString += `
     <div class="details-btns">
