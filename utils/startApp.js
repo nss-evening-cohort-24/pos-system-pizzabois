@@ -10,6 +10,7 @@ const startApp = (user) => {
   homePage(user);
   domEvents(user);
   navEvents(user);
+  domEvents(user);
 };
 
 export default startApp;
