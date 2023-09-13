@@ -1,5 +1,8 @@
 import getItems from '../api/items';
 import orderDetails from '../pages/orderDetails';
+import getOrdersByUid from '../api/orders';
+import showOrders from '../pages/viewOrders';
+import viewRevenue from '../pages/viewRevenue';
 
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -7,14 +10,6 @@ const domEvents = (user) => {
       getItems(user.uid).then((items) => orderDetails(items));
     }
   });
-};
-
-export default domEvents;
-import getOrdersByUid from '../api/orders';
-import showOrders from '../pages/viewOrders';
-import viewRevenue from '../pages/viewRevenue';
-
-const domEvents = (user) => {
   document.querySelector('#landing-page').addEventListener('click', (e) => {
     if (e.target.id.includes('home-view-revenue-btn')) {
       viewRevenue();
