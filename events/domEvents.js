@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { deleteOrder, getOrdersByUid } from '../api/orders';
 import showOrders from '../pages/viewOrders';
 import noOrders from '../utils/noOrders';
@@ -18,6 +19,15 @@ const domEvents = (user) => {
           });
         });
       }
+=======
+import getItems from '../api/items';
+import orderDetails from '../pages/orderDetails';
+
+const domEvents = (user) => {
+  document.querySelector('#main-container').addEventListener('click', (e) => {
+    if (e.target.id.includes('order-card-details')) {
+      getItems(user.uid).then((items) => orderDetails(items));
+>>>>>>> main
     }
   });
 };
