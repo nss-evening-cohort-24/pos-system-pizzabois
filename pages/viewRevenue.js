@@ -1,6 +1,8 @@
+import clearDom from '../utils/clearDom';
 import renderToDom from '../utils/renderToDom';
 
 const viewRevenue = () => {
+  clearDom();
   let domString = '';
   domString += `
   <h1 id='revenue-title'>REVENUE</h1>

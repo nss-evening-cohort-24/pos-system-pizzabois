@@ -12,7 +12,7 @@ const closeOrders = () => {
     </select>
     <div class="mb-3">
       <label for="close-order-tip-input" class="form-label">Tip Amount</label>
-      <input type="number" class="form-control" id="close-order-tip-input" aria-describedby="emailHelp">
+      <input type="number" name="currency" class="form-control" id="close-order-tip-input" aria-describedby="emailHelp">
     </div>
     <button type="submit" class="btn btn-primary" id='close-order-form'>Close Order</button>
   </form>
