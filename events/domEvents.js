@@ -1,4 +1,4 @@
-import { getSingleOrder, deleteOrder, getOrdersByUid } from '../api/orders';
+import { getSingleOrder, deleteOrder, getOrders } from '../api/orders';
 import showOrders from '../pages/viewOrders';
 import noOrders from '../utils/noOrders';
 import getItems from '../api/items';
@@ -13,7 +13,7 @@ const domEvents = (user) => {
       if (window.confirm('Want to delete?')) {
         const [, firebaseKey] = e.target.id.split('--');
         deleteOrder(firebaseKey).then(() => {
-          getOrdersByUid(user.uid).then((array) => {
+          getOrders(user.uid).then((array) => {
             if (array.length) {
               showOrders(array);
             } else {
@@ -36,7 +36,7 @@ const domEvents = (user) => {
       viewRevenue();
     }
     if (e.target.id.includes('home-view-orders-btn')) {
-      getOrdersByUid(user.uid).then((orders) => showOrders(orders));
+      getOrders(user.uid).then((orders) => showOrders(orders));
     }
     if (e.target.id.includes('home-create-order-btn')) {
       showOrderForm();

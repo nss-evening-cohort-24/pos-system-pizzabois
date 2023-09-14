@@ -2,7 +2,7 @@ import client from '../utils/client';
 
 const endpoint = client.databaseURL;
 
-const getOrdersByUid = (uid) => new Promise((resolve, reject) => {
+const getOrders = (uid) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/orders.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
@@ -66,6 +66,13 @@ const getSingleOrder = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const searchOrders = (searchValue, uid) => new Promise((resolve, reject) => {
+  getOrders(uid).then((orders) => {
+    const search = orders.filter((data) => data.name.toLowerCase().includes(searchValue));
+    resolve(search);
+  }).catch(reject);
+});
+
 export {
-  getOrdersByUid, deleteOrder, createOrder, updateOrders, getSingleOrder
+  getOrders, deleteOrder, createOrder, updateOrders, getSingleOrder, searchOrders
 };
