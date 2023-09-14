@@ -3,7 +3,7 @@ import { orderDetails } from '../pages/orderDetails';
 
 const formEvents = (user) => {
   document.querySelector('#item-form-container').addEventListener('submit', (e) => {
-    if (e.target.id.includes('item-form-submit')) {
+    if (e.target.id.includes('item-submit')) {
       const payload = {
         itemName: document.querySelector('#item-name').value,
         itemPrice: document.querySelector('#item-price').value,
@@ -19,7 +19,7 @@ const formEvents = (user) => {
       });
     }
 
-    if (e.target.id.includes('item-card-edit-btn')) {
+    if (e.target.id.includes('item-edit-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         itemName: document.querySelector('#item-name').value,
