@@ -8,7 +8,6 @@ const startApp = (user) => {
   domBuilder(user);
   navBar();
   homePage(user);
-  domEvents(user);
   navEvents(user);
   domEvents(user);
 };
