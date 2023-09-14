@@ -1,6 +1,6 @@
 import renderToDom from '../utils/renderToDom';
 
-const closeOrders = () => {
+const closeOrders = (obj) => {
   let domString = '';
   domString += `
   <form id='close-order-form'>
@@ -14,7 +14,7 @@ const closeOrders = () => {
       <label for="close-order-tip-input" class="form-label">Tip Amount</label>
       <input type="number" name="currency" class="form-control" id="close-order-tip-input" aria-describedby="emailHelp">
     </div>
-    <button type="submit" class="btn btn-primary" id='close-order-form'>Close Order</button>
+    <button type="submit" class="btn btn-primary" id='close-order-form--${obj.firebaseKey}--${obj.type}'>Close Order</button>
   </form>
   `;
 

@@ -3,8 +3,6 @@ import showOrders from '../pages/viewOrders';
 import noOrders from '../utils/noOrders';
 import getItems from '../api/items';
 import orderDetails from '../pages/orderDetails';
-import getOrdersByUid from '../api/orders';
-import showOrders from '../pages/viewOrders';
 import viewRevenue from '../pages/viewRevenue';
 
 const domEvents = (user) => {

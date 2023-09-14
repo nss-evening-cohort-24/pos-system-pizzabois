@@ -1,26 +1,30 @@
 import clearDom from '../utils/clearDom';
 import renderToDom from '../utils/renderToDom';
+import {
+  revenueTotal,
+  revenueCallIn, revenueCash, revenueCredit, revenueMobile, revenueTips, revenueWalkIn
+} from '../utils/revenueMath';
 
 const viewRevenue = () => {
   clearDom();
   let domString = '';
   domString += `
   <h1 id='revenue-title'>REVENUE</h1>
-  <h1 id='revenue-total'>TOTAL REVENUE:</h1>
+  <h1 id='revenue-total'>TOTAL REVENUE: $${revenueTotal()}</h1>
   <div class='revenue-date'>
     <p>DATE RANGE</p>
     <p></p>
   </div> 
   <div clas='revenue-tips>
-    <p>TOTAL TIPS: </p>
-    <p>TOTAL CALL IN ORDERS: </p>
-    <p>TOTAL WALK IN ORDERS: </p>
+    <p>TOTAL TIPS: $${revenueTips()}</p>
+    <p>TOTAL CALL IN ORDERS: ${revenueCallIn()} </p>
+    <p>TOTAL WALK IN ORDERS: ${revenueWalkIn()} </p>
   </div> 
   <div clas='revenue-payment-type>
     <p>PAYMENT TYPES:</p>
-    <p>CASH - </p>
-    <p>CREDIT - </p>
-    <p>MOBILE - </p>
+    <p>CASH - ${revenueCash()}</p>
+    <p>CREDIT - ${revenueCredit()}</p>
+    <p>MOBILE - ${revenueMobile()}</p>
   </div> 
   `;
 
