@@ -2,7 +2,7 @@ import renderToDom from './renderToDom';
 
 const noOrders = () => {
   const domString = 'no orders';
-  renderToDom('#main-container', domString);
+  renderToDom('#order-container', domString);
 };
 
 export default noOrders;

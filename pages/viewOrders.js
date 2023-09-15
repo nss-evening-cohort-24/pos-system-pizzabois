@@ -6,7 +6,7 @@ const showOrders = (array) => {
   clearDom();
 
   let domString = '';
-  if (array.length < 1) {
+  if (!array.length) {
     noOrders();
   } else {
     array.forEach((order) => {

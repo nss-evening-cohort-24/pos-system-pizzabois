@@ -1,6 +1,8 @@
+import clearDom from '../utils/clearDom';
 import renderToDom from '../utils/renderToDom';
 
 const homePage = (user) => {
+  clearDom();
   const welcome = (person) => {
     let welcomeString = '';
     if (person.name) {
