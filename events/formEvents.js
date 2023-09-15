@@ -34,7 +34,9 @@ const formEvents = (user) => {
         getItems(user.uid).then(orderDetails);
       });
     }
+  });
 
+  document.querySelector('#main-container').addEventListener('submit', (e) => {
     if (e.target.id.includes('submit-order')) {
       const payload = {
         name: document.querySelector('#customer-name').value,
