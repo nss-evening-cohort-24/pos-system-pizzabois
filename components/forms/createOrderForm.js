@@ -1,3 +1,4 @@
+import { getSingleOrder } from '../../api/orders';
 import clearDom from '../../utils/clearDom';
 import renderToDom from '../../utils/renderToDom';
 
@@ -27,6 +28,7 @@ const showOrderForm = (uid, order = {}) => {
 </form>
   `;
   renderToDom('#order-form-container', domString);
+  getSingleOrder(`${order.firebaseKey || ''}`, uid);
 };
 
 export default showOrderForm;

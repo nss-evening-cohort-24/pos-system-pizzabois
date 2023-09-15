@@ -74,5 +74,10 @@ const searchOrders = (searchValue, uid) => new Promise((resolve, reject) => {
 });
 
 export {
-  getOrders, deleteOrder, createOrder, updateOrders, getSingleOrder, searchOrders
+  getOrders,
+  deleteOrder,
+  createOrder,
+  updateOrders,
+  getSingleOrder,
+  searchOrders
 };
