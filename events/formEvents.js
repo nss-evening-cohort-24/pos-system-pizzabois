@@ -1,6 +1,8 @@
 import getOrderItemsByOrderId from '../api/orderItems';
 import { createRevenue, updateRevenue } from '../api/revenue';
 import homePage from '../pages/homePage';
+import { createOrder, updateOrders, getOrders } from '../api/orders';
+import showOrders from '../pages/viewOrders';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -29,13 +31,6 @@ const formEvents = (user) => {
       });
     }
   });
-};
-
-export default formEvents;
-import { createOrder, updateOrders, getOrders } from '../api/orders';
-import showOrders from '../pages/viewOrders';
-
-const formEvents = (user) => {
   document.querySelector('#order-form-container').addEventListener('submit', (e) => {
     e.preventDefault();
     if (e.target.id.includes('submit-order')) {
