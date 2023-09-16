@@ -6,6 +6,8 @@ import { orderDetails, emptyDetails } from '../pages/orderDetails';
 import viewRevenue from '../pages/viewRevenue';
 import createItemForm from '../components/forms/createItemForm';
 import showOrderForm from '../components/forms/createOrderForm';
+import showItems from '../components/modal/showItems';
+// import addItemModal from '../components/modal/addItemModal';
 
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -26,18 +28,12 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('order-card-details')) {
-      console.warn('clicked');
-      getItems(user.uid).then((items) => orderDetails(items));
+      getItems(user.uid).then((items) => orderDetails(items)).then(showItems);
     }
 
     if (e.target.id.includes('order-card-edit-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleOrder(firebaseKey).then((orderData) => showOrderForm(user.uid, orderData));
-    }
-    // });
-
-    if (e.target.id.includes('item-add-btn')) {
-      createItemForm(user.uid);
     }
 
     if (e.target.id.includes('item-card-delete-btn')) {
@@ -55,6 +51,10 @@ const domEvents = (user) => {
         });
       }
     }
+
+    // if (e.target.id.includes('add-item-modal')) {
+    //   getItems().then((items) => orderDetails(items));
+    // }
 
     if (e.target.id.includes('item-card-edit-btn')) {
       const [, firebaseKey] = e.target.id.split('--');

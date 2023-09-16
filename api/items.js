@@ -19,6 +19,23 @@ const getItems = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getMenuItems = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/items.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
 const deleteItem = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/items/${firebaseKey}.json`, {
     method: 'DELETE',
@@ -70,5 +87,6 @@ export {
   deleteItem,
   getSingleItem,
   createItem,
-  updateItem
+  updateItem,
+  getMenuItems
 };
