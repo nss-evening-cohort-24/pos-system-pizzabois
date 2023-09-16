@@ -1,5 +1,6 @@
 import renderToDom from '../utils/renderToDom';
 import clearDom from '../utils/clearDom';
+import addItemModal from '../components/modal/addItemModal';
 
 const emptyDetails = () => {
   const domString = '<h2 id="no-orders-msg">No orders have been made yet!</h2>';
@@ -38,8 +39,8 @@ const orderDetails = (array) => {
   domString += `<h1 id="order-details-total" class="mb-5" "style="text-align:center;font-weight:bold;font-size:84px;">TOTAL: $${total.toFixed(2)}</h1>`;
 
   domString += `
-    <div class="details-btns mb-4">
-      <button type="button" class="btn btn-success" style="width:25%;height:64px;margin-right:12px;" id="item-add-btn-as">Add Item</button>
+    <div class="details-btn mb-4">
+      ${addItemModal()}
       <button type="button" class="btn btn-primary" style="width:25%;height:64px;margin-left:12px;" id="item-payment-btn-as">Go To Payment</button>
     </div>`;
 
