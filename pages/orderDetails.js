@@ -9,7 +9,7 @@ const emptyDetails = () => {
 const orderDetails = (array) => {
   clearDom();
 
-  let domString = '';
+  let domString = '<h1 class="text-center mt-5 mb-5" id="items-header">Your Items</h1>';
   let total = 0;
 
   if (array.length < 1) {
@@ -21,7 +21,7 @@ const orderDetails = (array) => {
         <div class="card-body" style="text-align:left;margin-left:22px;">
           <h5 class="card-title">${item.itemName}</h5>
           <h5 class="card-title">PRICE: ${item.itemPrice}</h5>
-          <i class="btn btn-primary" id="item-card-edit-btn--${item.firebaseKey}">Edit Item</i>
+          <i class="btn btn-warning" id="item-card-edit-btn--${item.firebaseKey}">Edit Item</i>
           <i class="btn btn-danger" id="item-card-delete-btn--${item.firebaseKey}">Delete Item</i>
         </div>
       </div>`;
@@ -35,15 +35,15 @@ const orderDetails = (array) => {
 
   // MAKE CONTAINER FOR TOTAL AND CONTAINER FOR VIEW ITEMS, RENDER TOTAL FROM THE ITEMS CONTAINER INTO TOTAL CONTAINER
 
-  domString += `<h1 id="order-details-total" class="mb-3" "style="text-align:center;font-weight:bold;font-size:84px;">TOTAL: $${total.toFixed(2)}</h1>`;
+  domString += `<h1 id="order-details-total" class="mb-5" "style="text-align:center;font-weight:bold;font-size:84px;">TOTAL: $${total.toFixed(2)}</h1>`;
 
   domString += `
-    <div class="details-btns">
-      <button type="button" class="btn btn-success" id="item-add-btn-as">Add Item</button>
-      <button type="button" class="btn btn-primary" id="item-payment-btn-as">Go To Payment</button>
+    <div class="details-btns mb-4">
+      <button type="button" class="btn btn-success" style="width:25%;height:64px;margin-right:12px;" id="item-add-btn-as">Add Item</button>
+      <button type="button" class="btn btn-primary" style="width:25%;height:64px;margin-left:12px;" id="item-payment-btn-as">Go To Payment</button>
     </div>`;
 
   renderToDom('#item-container', domString);
 };
 
-export default orderDetails;
+export { orderDetails, emptyDetails };

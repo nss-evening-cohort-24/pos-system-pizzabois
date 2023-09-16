@@ -1,9 +1,12 @@
 import { getSingleOrder, deleteOrder, getOrders } from '../api/orders';
 import showOrders from '../pages/viewOrders';
 import noOrders from '../utils/noOrders';
-import getItems from '../api/items';
-import orderDetails from '../pages/orderDetails';
+import {
+  getItems, deleteItem, getSingleItem, getItemsOrderId
+} from '../api/items';
+import { orderDetails, emptyDetails } from '../pages/orderDetails';
 import viewRevenue from '../pages/viewRevenue';
+import createItemForm from '../components/forms/createItemForm';
 import showOrderForm from '../components/forms/createOrderForm';
 
 const domEvents = (user) => {
@@ -24,13 +27,49 @@ const domEvents = (user) => {
       }
     }
     if (e.target.id.includes('order-card-details')) {
-      getItems(user.uid).then((items) => orderDetails(items));
+      const [, firebaseKey] = e.target.id.split('--');
+      getItems(firebaseKey).then((items) => orderDetails(items, firebaseKey));
     }
+
     if (e.target.id.includes('order-card-edit-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleOrder(firebaseKey).then((orderData) => showOrderForm(user.uid, orderData));
     }
+    // });
+
+    if (e.target.id.includes('item-add-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      getItemsOrderId(firebaseKey).then((items) => {
+        createItemForm(user.uid, items);
+      });
+    }
+
+    if (e.target.id.includes('item-card-delete-btn')) {
+    // eslint-disable-next-line no-alert
+      if (window.confirm('Remove?')) {
+        const [, firebaseKey] = e.target.id.split('--');
+        deleteItem(firebaseKey).then(() => {
+          getItems(user.uid).then((itemArr) => {
+            if (itemArr.length) {
+              orderDetails(itemArr);
+            } else {
+              emptyDetails();
+            }
+          });
+        });
+      }
+    }
+
+    if (e.target.id.includes('item-card-edit-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      getSingleItem(firebaseKey).then((itemObj) => createItemForm(user.uid, itemObj));
+    }
+
+    if (e.target.id.includes('item-payment-btn')) {
+      console.warn('clicked');
+    }
   });
+
   document.querySelector('#landing-page').addEventListener('click', (e) => {
     if (e.target.id.includes('home-view-revenue-btn')) {
       viewRevenue();
