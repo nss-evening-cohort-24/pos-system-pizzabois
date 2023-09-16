@@ -72,7 +72,6 @@ const formEvents = (user) => {
 
   document.querySelector('#item-form-container').addEventListener('submit', (e) => {
     if (e.target.id.includes('item-submit')) {
-      const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         itemName: document.querySelector('#item-name').value,
         itemPrice: document.querySelector('#item-price').value,

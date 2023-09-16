@@ -6,7 +6,7 @@ const emptyDetails = () => {
   renderToDom('#order-container', domString);
 };
 
-const orderDetails = (array) => {
+const orderDetails = (array, orderId) => {
   clearDom();
 
   let domString = '<h1 class="text-center mt-5 mb-5" id="items-header">Your Items</h1>';
@@ -39,8 +39,8 @@ const orderDetails = (array) => {
 
   domString += `
     <div class="details-btns mb-4">
-      <button type="button" class="btn btn-success" style="width:25%;height:64px;margin-right:12px;" id="item-add-btn-as">Add Item</button>
-      <button type="button" class="btn btn-primary" style="width:25%;height:64px;margin-left:12px;" id="item-payment-btn-as">Go To Payment</button>
+      <button type="button" class="btn btn-success" style="width:25%;height:64px;margin-right:12px;" id="item-add-btn-as--${orderId}">Add Item</button>
+      <button type="button" class="btn btn-primary" style="width:25%;height:64px;margin-left:12px;" id="item-payment-btn-as--${orderId}">Go To Payment</button>
     </div>`;
 
   renderToDom('#item-container', domString);
