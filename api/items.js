@@ -19,6 +19,23 @@ const getItems = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getItemsOrderId = (orderId) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/items.json?orderBy="orderId"&equalTo="${orderId}}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
 const getMenuItems = () => new Promise((resolve, reject) => {
   fetch(`${endpoint}/items.json`, {
     method: 'GET',
@@ -87,6 +104,7 @@ export {
   deleteItem,
   getSingleItem,
   createItem,
+  getItemsOrderId,
   updateItem,
   getMenuItems
 };
