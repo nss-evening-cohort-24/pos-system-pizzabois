@@ -1,30 +1,39 @@
 import clearDom from '../utils/clearDom';
 import renderToDom from '../utils/renderToDom';
+import {
+  revenueTotal, revenueCallIn, revenueCash, revenueCredit, revenueMobile, revenueTips, revenueWalkIn
+} from '../utils/revenueMath';
 
 const viewRevenue = () => {
   clearDom();
   let domString = '';
   domString += `
   <h1 id='revenue-title'>REVENUE</h1>
-  <h1 id='revenue-total'>TOTAL REVENUE:</h1>
+  <h1 id='revenue-total'></h1>
   <div class='revenue-date'>
-    <p>DATE RANGE</p>
-    <p></p>
+    <p>DATE RANGE: All Time</p>
   </div> 
-  <div clas='revenue-tips>
-    <p>TOTAL TIPS: </p>
-    <p>TOTAL CALL IN ORDERS: </p>
-    <p>TOTAL WALK IN ORDERS: </p>
+  <div class='rev1'>
+    <p id='revenue-tips'></p>
+    <p id='revenue-call'></p>
+    <p id='revenue-walk'></p>
   </div> 
-  <div clas='revenue-payment-type>
+  <div class='revenue-payment-type'>
     <p>PAYMENT TYPES:</p>
-    <p>CASH - </p>
-    <p>CREDIT - </p>
-    <p>MOBILE - </p>
+    <p id='revenue-cash'></p>
+    <p id='revenue-credit'></p>
+    <p id='revenue-mobile'></p>
   </div> 
   `;
 
   renderToDom('#revenue-container', domString);
+  revenueTotal();
+  revenueTips();
+  revenueWalkIn();
+  revenueCallIn();
+  revenueCash();
+  revenueCredit();
+  revenueMobile();
 };
 
 export default viewRevenue;

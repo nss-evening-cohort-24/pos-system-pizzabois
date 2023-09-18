@@ -12,6 +12,7 @@ const startApp = (user) => {
   navEvents(user);
   domEvents(user);
   formEvents(user);
+  navEvents(user);
 };
 
 export default startApp;
