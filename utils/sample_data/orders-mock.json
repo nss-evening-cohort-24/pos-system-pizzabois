@@ -3,7 +3,7 @@
     "firebaseKey": "-NdzhDpqI72kuFBDeHzh",
     "name": "Dirk Pegg",
     "isClosed": true,
-    "type": "walk-in",
+    "type": "Walk-in",
     "emailAddress": "dpegg0@yellowbook.com",
     "phoneNumber": "806-954-7371",
     "uid": "MyJYUrTxrcQRtWeGEyVcWVwePsf2"
@@ -12,7 +12,7 @@
     "firebaseKey": "-NdzhDpw0upVCMwg7O5U",
     "name": "Atalanta Bartot",
     "isClosed": true,
-    "type": "call-in",
+    "type": "Call-in",
     "emailAddress": "abartot1@netscape.com",
     "phoneNumber": "984-363-9818",
     "uid": "gBo2Cb409EUFoFLE0jdZCfIg85r2"
@@ -21,7 +21,7 @@
     "firebaseKey": "-NdzhDpyH9nDi-biADYg",
     "name": "Granger Padgett",
     "isClosed": true,
-    "type": "walk-in",
+    "type": "Walk-in",
     "emailAddress": "gpadgett2@mozilla.com",
     "phoneNumber": "663-387-3431",
     "uid": "0x2jchs4k2YXRYdme5OIawjDxRZ2"
@@ -30,7 +30,7 @@
     "firebaseKey": "-NdzhDpz1kL7SlFoAYBP",
     "name": "Jeddy Simeon",
     "isClosed": false,
-    "type": "online",
+    "type": "Call-in",
     "emailAddress": "jsimeon3@e-recht24.de",
     "phoneNumber": "671-858-1431",
     "uid": "MyJYUrTxrcQRtWeGEyVcWVwePsf2"
@@ -39,7 +39,7 @@
     "firebaseKey": "-NdzhDq04tpTJJaz6-W5",
     "name": "Kanya Bothams",
     "isClosed": false,
-    "type": "walk-in",
+    "type": "Walk-in",
     "emailAddress": "kbothams4@creativecommons.org",
     "phoneNumber": "535-504-6355",
     "uid": "gBo2Cb409EUFoFLE0jdZCfIg85r2"
@@ -48,7 +48,7 @@
     "firebaseKey": "-NdzhDq15CoKAgdTAC7H",
     "name": "Daisey Barrand",
     "isClosed": false,
-    "type": "online",
+    "type": "Call-in",
     "emailAddress": "dbarrand5@earthlink.net",
     "phoneNumber": "572-318-7980",
     "uid": "0x2jchs4k2YXRYdme5OIawjDxRZ2"
