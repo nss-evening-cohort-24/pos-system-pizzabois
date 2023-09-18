@@ -7,6 +7,7 @@ import showOrderForm from '../components/forms/createOrderForm';
 import homePage from '../pages/homePage';
 import noOrders from '../utils/noOrders';
 import createItemForm from '../components/forms/createItemForm';
+import clearDom from '../utils/clearDom';
 
 const navEvents = (user) => {
   document.querySelector('#nav-bar').addEventListener('click', (e) => {
@@ -35,6 +36,7 @@ const navEvents = (user) => {
         if (search.length) {
           showOrders(search);
         } else {
+          clearDom();
           noOrders();
         }
       });
