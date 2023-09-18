@@ -1,11 +1,67 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "~bootstrap/scss/bootstrap";
+$bgimg: url(https://img.freepik.com/free-photo/grunge-wall-texture_1194-8704.jpg?w=1060&t=st=1694882378~exp=1694882978~hmac=92b4a1a5ad9f9a04d90cfcc554d81a6fe5ef96ab505a9db5d32128d01c763a2d);
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 
 
 body {
   background-color: rgb(60, 56, 50);
   color: brown;
   text-align: center;
+  background: $bgimg; 
+  background-size: 100%;  
+  font-family: 'Rubik' 
+}
+#landing-page{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 70px;
+  width: 320px;
+  #home-title{
+    font-size: 55px;
+    text-shadow: 0 0 5px black;
+    font-weight: bolder;
+    color:rgb(255, 183, 0) ;
+  }
+  .btn {
+    color: black;
+    font-weight: 500;
+    background-color:rgb(255, 183, 0) ;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    border-color: black;
+    border: solid 2px black;
+    --bs-btn-hover-color: #f00000 !important;
+  }
+}
+#order-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 20px 50px 20px;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 50px;
+  color: rgb(255, 183, 0);
+  h2{
+    color:rgb(255, 183, 0);
+  }
+}
+#order-container> .card {
+  background-color: rgb(255, 183, 0);
+  border: solid 2px rgb(0, 0, 0);
+  margin: auto;
+  margin-bottom: 30px;
+  font-weight: normal;
+  .btn {
+    --bs-btn-hover-border-color: #f00000;
+  }
+}
+
+#app > img {
+  display: flex;
+  width: 21.875em;
+  margin: 9.375em auto 0 auto;
 }
 
 #order-details-total,
@@ -13,3 +69,34 @@ body {
 #items-header {
   color: white;
 }
+
+#order-form-container {
+  display: flex;
+  color: rgb(255, 183, 0);
+  margin: auto;
+  justify-content: center;
+  font-weight: 500;
+  text-shadow: 0 0 10px black;
+  .btn{
+    margin-top: 30px;
+    border: solid 2px rgb(255, 183, 0);
+ }
+ input, select{
+  border: solid 2px black;
+  $input-border-focus-color:red !important;
+ } 
+}
+ #item-container {
+  .btn{
+    border: solid 2px rgb(255, 183, 0);
+  }
+  #add-item-modal-btn{
+    background-color:rgb(255, 183, 0);
+    border: solid 2px black;
+    color: black;
+    font-weight: 500;
+  }
+  h1{
+    color:rgb(255, 183, 0);
+   }
+ }

@@ -3,7 +3,7 @@ import clearDom from '../utils/clearDom';
 import addItemModal from '../components/modal/addItemModal';
 
 const emptyDetails = () => {
-  const domString = '<h2 id="no-orders-msg">No orders have been made yet!</h2>';
+  const domString = '<h2 id="no-orders-msg">No items have been added yet</h2>';
   renderToDom('#order-container', domString);
 };
 
@@ -41,7 +41,7 @@ const orderDetails = (array) => {
   domString += `
     <div class="details-btn mb-4">
       ${addItemModal()}
-      <button type="button" class="btn btn-primary" style="width:25%;height:64px;margin-left:12px;" id="item-payment-btn-as">Go To Payment</button>
+      <button type="button" class="btn btn-dark" style="width:25%;height:64px;margin-left:12px;" id="item-payment-btn-as">Go To Payment</button>
     </div>`;
 
   renderToDom('#item-container', domString);
