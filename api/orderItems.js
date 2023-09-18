@@ -27,7 +27,7 @@ const updateOrderItem = (payload) => new Promise((resolve, reject) => {
 });
 
 const getOrderItemsByOrderId = (orderId) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/orders).json?orderBy="orderId"&equalTo="${orderId}"`, {
+  fetch(`${endpoint}/orderItems.json?orderBy="orderId"&equalTo="${orderId}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
