@@ -24,9 +24,11 @@ const orderDetails = (array) => {
           <h5 class="card-title">${item.itemName}</h5>
           <h5 class="card-title">PRICE: ${item.itemPrice}</h5>
           <i class="btn btn-warning" id="item-card-edit-btn--${item.firebaseKey}">Edit Item</i>
-          <i class="btn btn-danger" id="item-card-delete-btn--${item.firebaseKey}">Delete Item</i>
+          <i class="btn btn-danger" id="item-card-delete-btn--${item.firebaseKey}--${array.firebaseKey}">Delete Item</i>
         </div>
       </div>`;
+
+      console.warn(domString);
 
       const totalPrice = parseFloat(item.itemPrice);
       if (!Number.isNaN(totalPrice)) {
