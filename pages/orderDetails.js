@@ -3,28 +3,30 @@ import clearDom from '../utils/clearDom';
 import addItemModal from '../components/modal/addItemModal';
 import showItems from '../components/modal/showItems';
 
+let domString = '';
+
 const emptyDetails = () => {
-  const domString = '<h2 id="no-orders-msg">No items have been added yet</h2>';
-  renderToDom('#order-container', domString);
+  domString = '<h2 id="no-orders-msg" class="mb-5" style="color:#FFB700;">No items have been added yet</h2>';
+  renderToDom('#item-container', domString);
 };
 
 const orderDetails = (array) => {
   clearDom();
 
-  let domString = '<h1 class="text-center mt-5 mb-5" id="items-header">Your Items</h1>';
+  domString = '<h1 class="text-center mt-5 mb-5" id="items-header">Your Items</h1>';
   let total = 0;
 
-  if (array.orderItems < 0) {
+  if (!array.orderItems.length) {
     emptyDetails();
   } else {
     array.orderItems.forEach((item) => {
       domString += `
       <div class="card" style="margin: 0 auto;margin-bottom:50px;width:75%;float:none;">
-        <div class="card-body" style="text-align:lefst;margin-left:22px;">
+        <div class="card-body" style="text-align:left;margin-left:22px;">
           <h5 class="card-title">${item.itemName}</h5>
           <h5 class="card-title">PRICE: ${item.itemPrice}</h5>
           <i class="btn btn-warning" id="item-card-edit-btn--${item.firebaseKey}">Edit Item</i>
-          <i class="btn btn-danger" id="item-card-delete-btn--${item.firebaseKey}">Delete Item</i>
+          <i class="btn btn-danger" id="item-card-delete-btn--${item.firebaseKey}--${array.firebaseKey}">Delete Item</i>
         </div>
       </div>`;
 
