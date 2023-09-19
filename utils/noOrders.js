@@ -1,7 +1,9 @@
 import renderToDom from './renderToDom';
 
+let domString = '';
+
 const noOrders = () => {
-  const domString = '<h2>No orders found</h2>';
+  domString = '<h2>No orders found</h2>';
   renderToDom('#order-container', domString);
 };
 

@@ -4,7 +4,6 @@ import renderToDom from '../../utils/renderToDom';
 const showItems = (orderId) => {
   let domString = '';
   getMenuItems().then((array) => {
-    console.warn(getMenuItems());
     array.forEach((item) => {
       domString += `
       <div style="width:42%;">

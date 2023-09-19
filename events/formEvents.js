@@ -1,5 +1,5 @@
 import { createRevenue, updateRevenue } from '../api/revenue';
-import homePage from '../pages/homePage';
+// import homePage from '../pages/homePage';
 import {
   createOrder, updateOrders, getOrders, getSingleOrder
 } from '../api/orders';
@@ -23,11 +23,14 @@ const formEvents = (user) => {
           orderType: array.type,
           tips: document.querySelector('#close-order-tip-input').value
         };
-        createRevenue(payload).then(({ name }) => {
-          const patchPayload = { firebaseKey: name };
+        const closedPayload = { firebaseKey, isClosed: true };
+        updateOrders(closedPayload).then(() => {
+          createRevenue(payload).then(({ name }) => {
+            const patchPayload = { firebaseKey: name };
 
-          updateRevenue(patchPayload).then(() => {
-            homePage(user);
+            updateRevenue(patchPayload).then(() => {
+              getOrders(user.uid).then(showOrders);
+            });
           });
         });
       });

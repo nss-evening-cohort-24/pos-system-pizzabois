@@ -2,12 +2,17 @@ import { getSingleOrder, deleteOrder, getOrders } from '../api/orders';
 import showOrders from '../pages/viewOrders';
 import noOrders from '../utils/noOrders';
 import {
-  getItems, deleteItem, getSingleItem
+  getSingleItem
 } from '../api/items';
-import { orderDetails, emptyDetails } from '../pages/orderDetails';
+import { orderDetails } from '../pages/orderDetails';
 import viewRevenue from '../pages/viewRevenue';
 import showOrderForm from '../components/forms/createOrderForm';
-import { createOrderItems, updateOrderItem } from '../api/orderItems';
+import {
+  createOrderItems,
+  deleteOrderItem,
+  getOrderItemsByOrderId,
+  updateOrderItem
+} from '../api/orderItems';
 import getOrderDetails from '../api/mergedData';
 import createItemForm from '../components/forms/createItemForm';
 import closeOrders from '../pages/closeOrders';
@@ -29,6 +34,7 @@ const domEvents = (user) => {
         });
       }
     }
+
     if (e.target.id.includes('order-card-details')) {
       const [, firebaseKey] = e.target.id.split('--');
       getOrderDetails(firebaseKey).then((array) => orderDetails(array));
@@ -42,18 +48,17 @@ const domEvents = (user) => {
     if (e.target.id.includes('item-card-delete-btn')) {
     // eslint-disable-next-line no-alert
       if (window.confirm('Remove?')) {
-        const [, firebaseKey] = e.target.id.split('--');
-        deleteItem(firebaseKey).then(() => {
-          getItems(user.uid).then((itemArr) => {
-            if (itemArr.length) {
-              orderDetails(itemArr);
-            } else {
-              emptyDetails();
-            }
+        const [, firebaseKey, orderId] = e.target.id.split('--');
+        getOrderItemsByOrderId(orderId).then((array) => {
+          const orderIdArray = array.filter((item) => item.itemId === firebaseKey);
+          const orderObject = Object.values(orderIdArray);
+          deleteOrderItem(orderObject[0].firebaseKey).then(() => {
+            getOrderDetails(orderId).then((arr) => orderDetails(arr));
           });
         });
       }
     }
+
     if (e.target.id.includes('item-card-select-btn')) {
       const [, firebaseKey, orderId] = e.target.id.split('--');
       const payload = {
