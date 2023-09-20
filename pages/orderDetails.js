@@ -37,6 +37,7 @@ const orderDetails = (array) => {
     });
   }
 
+  // button below for use if decided
   // <i class="btn btn-warning" id="item-card-edit-btn--${item.firebaseKey}">Edit Item</i>
 
   domString += `<h1 id="order-details-total" class="mb-5" "style="text-align:center;font-weight:bold;font-size:84px;">TOTAL: $${total.toFixed(2)}</h1>`;
