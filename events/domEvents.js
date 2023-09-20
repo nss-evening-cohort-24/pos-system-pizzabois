@@ -1,9 +1,9 @@
 import { getSingleOrder, deleteOrder, getOrders } from '../api/orders';
 import showOrders from '../pages/viewOrders';
 import noOrders from '../utils/noOrders';
-import {
-  getSingleItem
-} from '../api/items';
+// import {
+//   getSingleItem
+// } from '../api/items';
 import { orderDetails } from '../pages/orderDetails';
 import viewRevenue from '../pages/viewRevenue';
 import showOrderForm from '../components/forms/createOrderForm';
@@ -14,7 +14,7 @@ import {
   updateOrderItem
 } from '../api/orderItems';
 import getOrderDetails from '../api/mergedData';
-import createItemForm from '../components/forms/createItemForm';
+// import createItemForm from '../components/forms/createItemForm';
 import closeOrders from '../pages/closeOrders';
 
 const domEvents = (user) => {
@@ -75,8 +75,9 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('item-card-edit-btn')) {
-      const [, firebaseKey] = e.target.id.split('--');
-      getSingleItem(firebaseKey).then((itemObj) => createItemForm(user.uid, itemObj));
+      const [, firebaseKey, orderId] = e.target.id.split('--');
+
+      getOrderItemsByOrderId(orderId).then(deleteOrderItem(firebaseKey));
     }
 
     if (e.target.id.includes('item-payment-btn')) {

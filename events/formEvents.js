@@ -6,6 +6,7 @@ import {
 import showOrders from '../pages/viewOrders';
 import { createItem, getItems, updateItem } from '../api/items';
 import { orderDetails } from '../pages/orderDetails';
+// import addItemModal from '../components/modal/addItemModal';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -88,19 +89,26 @@ const formEvents = (user) => {
       });
     }
 
-    if (e.target.id.includes('item-edit-btn')) {
-      const [, firebaseKey] = e.target.id.split('--');
-      const payload = {
-        itemName: document.querySelector('#item-name').value,
-        itemPrice: document.querySelector('#item-price').value,
-        uid: user.uid,
-        firebaseKey,
-      };
+    // document.querySelector('#item-container').addEventListener('click', () => {
+    //   if (e.target.id.includes('item-card-edit')) {
+    //     // addItemModal();
+    //     console.warn('clicked');
+    //   }
+    // });
+    // if (e.target.id.includes('item-edit-btn')) {
+    //   // const [, firebaseKey] = e.target.id.split('--');
+    //   // const payload = {
+    //   //   itemName: document.querySelector('#item-name').value,
+    //   //   itemPrice: document.querySelector('#item-price').value,
+    //   //   uid: user.uid,
+    //   //   firebaseKey,
+    //   // };
 
-      updateItem(payload).then(() => {
-        getItems(user.uid).then(orderDetails);
-      });
-    }
+    //   // updateItem(payload).then(() => {
+    //   //   getItems(user.uid).then(orderDetails);
+    //   // });
+    //   addItemModal();
+    // }
   });
 };
 
