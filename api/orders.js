@@ -73,11 +73,19 @@ const searchOrders = (searchValue, uid) => new Promise((resolve, reject) => {
   }).catch(reject);
 });
 
+const searchOrdersByPhone = (searchValue, uid) => new Promise((resolve, reject) => {
+  getOrders(uid).then((orders) => {
+    const search = orders.filter((data) => data.phoneNumber.includes(searchValue));
+    resolve(search);
+  }).catch(reject);
+});
+
 export {
   getOrders,
   deleteOrder,
   createOrder,
   updateOrders,
   getSingleOrder,
-  searchOrders
+  searchOrders,
+  searchOrdersByPhone
 };

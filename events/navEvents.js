@@ -1,7 +1,7 @@
 // import getOrdersByUid from '../api/orders';
 import showOrders from '../pages/viewOrders';
 
-import { getOrders, searchOrders } from '../api/orders';
+import { getOrders, searchOrders, searchOrdersByPhone } from '../api/orders';
 import { signOut } from '../utils/auth';
 import showOrderForm from '../components/forms/createOrderForm';
 import homePage from '../pages/homePage';
@@ -34,6 +34,20 @@ const navEvents = (user) => {
     if (event.keyCode === 13) {
       searchOrders(searchValue, user.uid).then((search) => {
         if (search.length) {
+          event.preventDefault();
+          showOrders(search);
+        } else {
+          clearDom();
+          noOrders();
+        }
+      });
+
+      document.querySelector('#search').value = '';
+    }
+    if (event.keyCode === 13) {
+      searchOrdersByPhone(searchValue, user.uid).then((search) => {
+        if (search.length) {
+          event.preventDefault();
           showOrders(search);
         } else {
           clearDom();
