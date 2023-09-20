@@ -4,7 +4,7 @@ const revenueTotal = () => {
   let salesTotal = 0;
   getRevenue().then((rev) => {
     rev.forEach((tot) => {
-      salesTotal += Number(tot.total);
+      salesTotal += Number(tot.total) + Number(tot.tips);
     });
     const total = salesTotal.toFixed(2);
     const div = document.querySelector('#revenue-total');
