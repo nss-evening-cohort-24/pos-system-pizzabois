@@ -1,9 +1,6 @@
 import { getSingleOrder, getOrders } from '../api/orders';
 import showOrders from '../pages/viewOrders';
 import noOrders from '../utils/noOrders';
-// import {
-//   getSingleItem
-// } from '../api/items';
 import { orderDetails } from '../pages/orderDetails';
 import viewRevenue from '../pages/viewRevenue';
 import showOrderForm from '../components/forms/createOrderForm';
@@ -14,7 +11,6 @@ import {
   updateOrderItem
 } from '../api/orderItems';
 import { getOrderDetails, deleteOrderOrderItemsRelationship } from '../api/mergedData';
-import createItemForm from '../components/forms/createItemForm';
 import closeOrders from '../pages/closeOrders';
 
 const domEvents = (user) => {
