@@ -8,6 +8,7 @@ const viewRevenue = () => {
   clearDom();
   let domString = '';
   domString += `
+  <div id='styling-container'>
   <h1 id='revenue-title'>REVENUE</h1>
   <h1 id='revenue-total'></h1>
   <div class='revenue-date'>
@@ -24,6 +25,8 @@ const viewRevenue = () => {
     <p id='revenue-credit'></p>
     <p id='revenue-mobile'></p>
   </div> 
+  </div>
+  
   `;
 
   renderToDom('#revenue-container', domString);
