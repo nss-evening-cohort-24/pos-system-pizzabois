@@ -19,6 +19,10 @@ const navBar = () => {
             <li class="nav-item">
               <a class="nav-link" href="#" id="item-add-btn">Create Item</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#" id="menu-btn">Menu</a>
+          </li>
+        </ul>
           </ul>
       <form class="d-flex" role="search">
           <input id="search" class="form-control me-2 d-inline-flex focus-ring focus-ring-danger py-1 px-2 text-decoration-none border rounded-2" type="search" placeholder="Search Orders" aria-label="Search">
