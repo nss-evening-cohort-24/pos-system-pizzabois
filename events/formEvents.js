@@ -5,7 +5,7 @@ import {
 } from '../api/orders';
 import showOrders from '../pages/viewOrders';
 import {
-  createItem, getItems, getMenuItems, updateItem
+  createItem, getMenuItems, updateItem
 } from '../api/items';
 import { orderDetails } from '../pages/orderDetails';
 import menu from '../pages/menu';

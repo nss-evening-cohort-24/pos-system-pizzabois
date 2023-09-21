@@ -10,6 +10,7 @@ const showOrders = (array) => {
 
   if (!array.length) {
     noOrders();
+    orderFilter();
   } else {
     orderFilter();
     array.forEach((order) => {
