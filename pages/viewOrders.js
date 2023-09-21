@@ -29,9 +29,10 @@ const showOrders = (array) => {
       } else {
         domString += `
             <a href="#" class="btn btn-dark" id="order-card-details-btn--${order.firebaseKey}">Details</a>
-          </div>
-        </div>`;
+         `;
       }
+      domString += ` </div>
+      </div>`;
     });
 
     renderToDom('#order-container', domString);
