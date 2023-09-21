@@ -10,6 +10,7 @@ const showOrders = (array) => {
 
   if (!array.length) {
     noOrders();
+    orderFilter();
   } else {
     orderFilter();
     array.forEach((order) => {
@@ -22,11 +23,15 @@ const showOrders = (array) => {
           <h6 class="card-subtitle mb-2 text-body">${order.type}</h6>`;
       if (!order.isClosed) {
         domString += `
+        <a href="#" class="btn btn-dark" id="order-card-details-btn--${order.firebaseKey}">Details</a>
+        <a href="#" class="btn btn-dark" id="order-card-edit-btn--${order.firebaseKey}">Edit</a>
+        <a href="#" class="btn btn-dark" id="order-card-delete-btn--${order.firebaseKey}">Delete</a>`;
+      } else {
+        domString += `
             <a href="#" class="btn btn-dark" id="order-card-details-btn--${order.firebaseKey}">Details</a>
-            <a href="#" class="btn btn-dark" id="order-card-edit-btn--${order.firebaseKey}">Edit</a>
-            <a href="#" class="btn btn-dark" id="order-card-delete-btn--${order.firebaseKey}">Delete</a>`;
+          </div>
+        </div>`;
       }
-      domString += '</div></div>';
     });
 
     renderToDom('#order-container', domString);

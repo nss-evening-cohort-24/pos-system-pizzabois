@@ -1,32 +1,38 @@
 {
   "-NdzlLlaOavuDjDjZo2L": {
     "firebaseKey": "-NdzlLlaOavuDjDjZo2L",
-    "itemName": "12pc Wings",
-    "itemPrice": 20.48
+    "itemName": "12 pc wings",
+    "itemDescription": "A nice set of waaaangs",
+    "itemPrice": 1.93
   },
   "-NdzlLlboMgUma7Px_Jd": {
     "firebaseKey": "-NdzlLlboMgUma7Px_Jd",
-    "itemName": "6pc wings",
-    "itemPrice": 13.49
+    "itemName": "6 piece wings",
+    "itemDescription": "A nice set of waaaangs",
+    "itemPrice": 306.89
   },
   "-NdzlLlboMgUma7Px_Je": {
     "firebaseKey": "-NdzlLlboMgUma7Px_Je",
-    "itemName": "14in Cheese",
-    "itemPrice": 23.45
+    "itemName": "14in cheese pizza",
+    "itemDescription": "A nice 14 inch pizza smothered with cheese",
+    "itemPrice": 113.57
   },
   "-NdzlLlcOWx-6Rc0qccO": {
     "firebaseKey": "-NdzlLlcOWx-6Rc0qccO",
-    "itemName": "18in Cheese",
-    "itemPrice": 29.57
+    "itemName": "18in cheese pizza",
+    "itemDescription": "A nice 18 inch pizza smothered with cheese",
+    "itemPrice": 353.26
   },
   "-NdzlLldoKroQScuq9SC": {
     "firebaseKey": "-NdzlLldoKroQScuq9SC",
-    "itemName": "14in Pepperoni",
-    "itemPrice": 25.68
+    "itemName": "14in pepperoni pizza",
+    "itemDescription": "A nice 14 inch pizza smothered with cheese and pepperoni",
+    "itemPrice": 201.81
   },
   "-NdzlLlecU20yUkVWgps": {
     "firebaseKey": "-NdzlLlecU20yUkVWgps",
-    "itemName": "18in Pepperoni",
-    "itemPrice": 32.45
+    "itemName": "18in pepperoni pizza",
+    "itemDescription": "A  nice 18 inch pizza smothered with cheese and pepperoni",
+    "itemPrice": 141.03
   }
 }

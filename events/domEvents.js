@@ -16,9 +16,9 @@ import {
   updateOrderItem
 } from '../api/orderItems';
 import { getOrderDetails, deleteOrderOrderItemsRelationship } from '../api/mergedData';
-import createItemForm from '../components/forms/createItemForm';
 import closeOrders from '../pages/closeOrders';
 import menu from '../pages/menu';
+import createItemForm from '../components/forms/createItemForm';
 
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -78,8 +78,9 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('item-card-edit-btn')) {
-      const [, firebaseKey] = e.target.id.split('--');
-      getSingleItem(firebaseKey).then((itemObj) => createItemForm(user.uid, itemObj));
+      const [, firebaseKey, orderId] = e.target.id.split('--');
+
+      getOrderItemsByOrderId(orderId).then(deleteOrderItem(firebaseKey));
     }
 
     if (e.target.id.includes('item-payment-btn')) {
