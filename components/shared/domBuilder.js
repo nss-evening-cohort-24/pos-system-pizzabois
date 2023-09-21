@@ -5,9 +5,11 @@ const domBuilder = () => {
   <div id="nav-bar"></div>
   <div id="main-container">
     <div id="landing-page"></div>
+    <div id="order-filter"></div>
     <div id="order-container"></div>
     <div id="order-form-container"></div>
     <div id="item-container"></div>
+    <div id="menu-container"></div>
     <div id="item-modal-container"></div>
     <div id="item-form-container"></div>
     <div id="close-order-container"></div>

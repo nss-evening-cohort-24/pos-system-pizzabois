@@ -4,9 +4,12 @@ import {
   createOrder, updateOrders, getOrders, getSingleOrder
 } from '../api/orders';
 import showOrders from '../pages/viewOrders';
-import { createItem, getItems, updateItem } from '../api/items';
+import {
+  createItem, getItems, getMenuItems, updateItem
+} from '../api/items';
 import { orderDetails } from '../pages/orderDetails';
-// import addItemModal from '../components/modal/addItemModal';
+import menu from '../pages/menu';
+import { getOrderDetails } from '../api/mergedData';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -49,7 +52,7 @@ const formEvents = (user) => {
         const patchPayload = { firebaseKey: name };
 
         updateOrders(patchPayload).then(() => {
-          getOrders(user.uid).then(showOrders);
+          getOrderDetails(name).then((order) => orderDetails(order));
         });
       });
     }
@@ -84,7 +87,7 @@ const formEvents = (user) => {
         const patchPayload = { firebaseKey: name };
 
         updateItem(patchPayload).then(() => {
-          getItems(user.uid).then((items) => orderDetails(items));
+          getMenuItems().then(menu);
         });
       });
     }

@@ -1,6 +1,11 @@
 import { getSingleOrder, getOrders } from '../api/orders';
 import showOrders from '../pages/viewOrders';
 import noOrders from '../utils/noOrders';
+import {
+  deleteItem,
+  getMenuItems,
+  getSingleItem
+} from '../api/items';
 import { orderDetails } from '../pages/orderDetails';
 import viewRevenue from '../pages/viewRevenue';
 import showOrderForm from '../components/forms/createOrderForm';
@@ -12,6 +17,8 @@ import {
 } from '../api/orderItems';
 import { getOrderDetails, deleteOrderOrderItemsRelationship } from '../api/mergedData';
 import closeOrders from '../pages/closeOrders';
+import menu from '../pages/menu';
+import createItemForm from '../components/forms/createItemForm';
 
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -79,6 +86,39 @@ const domEvents = (user) => {
     if (e.target.id.includes('item-payment-btn')) {
       const [, firebaseKey, total] = e.target.id.split('--');
       closeOrders(firebaseKey, total);
+    }
+    if (e.target.id.includes('menu-create-btn')) {
+      createItemForm(user.uid);
+    }
+    if (e.target.id.includes('menu-item-edit-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      getSingleItem(firebaseKey).then((itemObj) => createItemForm(user.uid, itemObj));
+    }
+    if (e.target.id.includes('menu-item-delete-btn')) {
+      // eslint-disable-next-line no-alert
+      if (window.confirm('Remove?')) {
+        const [, firebaseKey] = e.target.id.split('--');
+        deleteItem(firebaseKey).then(() => {
+          getMenuItems().then((items) => menu(items));
+        });
+      }
+    }
+    if (e.target.id.includes('open-orders')) {
+      getOrders(user.uid).then((array) => {
+        const filter = array.filter((item) => !item.isClosed);
+        const filterArray = Object.values(filter);
+        showOrders(filterArray);
+      });
+    }
+    if (e.target.id.includes('closed-orders')) {
+      getOrders(user.uid).then((array) => {
+        const filter = array.filter((item) => item.isClosed);
+        const filterArray = Object.values(filter);
+        showOrders(filterArray);
+      });
+    }
+    if (e.target.id.includes('all-orders')) {
+      getOrders(user.uid).then(showOrders);
     }
   });
 

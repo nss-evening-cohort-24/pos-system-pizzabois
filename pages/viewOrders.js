@@ -1,3 +1,4 @@
+import orderFilter from '../components/buttons/orderFilter';
 import clearDom from '../utils/clearDom';
 import noOrders from '../utils/noOrders';
 import renderToDom from '../utils/renderToDom';
@@ -10,6 +11,7 @@ const showOrders = (array) => {
   if (!array.length) {
     noOrders();
   } else {
+    orderFilter();
     array.forEach((order) => {
       domString += `
       <div class="card" style="width: 18rem;">
@@ -30,6 +32,7 @@ const showOrders = (array) => {
         </div>`;
       }
     });
+
     renderToDom('#order-container', domString);
   }
 };
