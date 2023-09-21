@@ -5,7 +5,7 @@ import {
 } from '../api/orders';
 import showOrders from '../pages/viewOrders';
 import {
-  createItem, getItems, getMenuItems, updateItem
+  createItem, getMenuItems, updateItem
 } from '../api/items';
 import { orderDetails } from '../pages/orderDetails';
 import menu from '../pages/menu';
@@ -92,19 +92,26 @@ const formEvents = (user) => {
       });
     }
 
-    if (e.target.id.includes('item-edit-btn')) {
-      const [, firebaseKey] = e.target.id.split('--');
-      const payload = {
-        itemName: document.querySelector('#item-name').value,
-        itemPrice: document.querySelector('#item-price').value,
-        uid: user.uid,
-        firebaseKey,
-      };
+    // document.querySelector('#item-container').addEventListener('click', () => {
+    //   if (e.target.id.includes('item-card-edit')) {
+    //     // addItemModal();
+    //     console.warn('clicked');
+    //   }
+    // });
+    // if (e.target.id.includes('item-edit-btn')) {
+    //   // const [, firebaseKey] = e.target.id.split('--');
+    //   // const payload = {
+    //   //   itemName: document.querySelector('#item-name').value,
+    //   //   itemPrice: document.querySelector('#item-price').value,
+    //   //   uid: user.uid,
+    //   //   firebaseKey,
+    //   // };
 
-      updateItem(payload).then(() => {
-        getItems(user.uid).then(orderDetails);
-      });
-    }
+    //   // updateItem(payload).then(() => {
+    //   //   getItems(user.uid).then(orderDetails);
+    //   // });
+    //   addItemModal();
+    // }
   });
 };
 
