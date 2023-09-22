@@ -24,7 +24,7 @@ const orderDetails = (array) => {
       <div class="card" style="margin: 0 auto;margin-bottom:50px;width:50%;float:none;">
         <div class="card-body" style="text-align:center;margin-left:22px;">
           <h3 class="card-title" style="text-align:center;">${item.itemName}</h3>
-          <h6 class="mb-3 mt-3" style="color:#70888f">${item.itemDescription}</h6>
+          <h6 class="mb-3 mt-3" style="color:black">${item.itemDescription}</h6>
           <h4 class="card-title mt-2 mb-3">$${item.itemPrice}</h4>
           <i class="btn btn-danger" id="item-card-delete-btn--${item.firebaseKey}--${array.firebaseKey}">Delete Item</i>
         </div>
