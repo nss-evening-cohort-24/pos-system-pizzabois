@@ -6,7 +6,6 @@ import { signOut } from '../utils/auth';
 import showOrderForm from '../components/forms/createOrderForm';
 import homePage from '../pages/homePage';
 import noOrders from '../utils/noOrders';
-import createItemForm from '../components/forms/createItemForm';
 import clearDom from '../utils/clearDom';
 import menu from '../pages/menu';
 import { getMenuItems } from '../api/items';
@@ -24,9 +23,6 @@ const navEvents = (user) => {
     }
     if (e.target.id.includes('home-page-logo-btn')) {
       homePage(user);
-    }
-    if (e.target.id.includes('item-add-btn')) {
-      createItemForm(user.uid);
     }
     if (e.target.id.includes('menu-btn')) {
       getMenuItems().then(menu);

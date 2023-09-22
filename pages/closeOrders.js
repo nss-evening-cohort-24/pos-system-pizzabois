@@ -15,9 +15,9 @@ const closeOrders = (orderId, total) => {
     </select>
     <div class="mb-3">
       <label for="close-order-tip-input" class="form-label">Tip Amount</label>
-      <input type="number" name="currency" class="form-control" id="close-order-tip-input" aria-describedby="emailHelp">
+      <input type="number" name="currency" class="form-control" id="close-order-tip-input" aria-describedby="emailHelp" required>
     </div>
-    <button type="submit" class="btn btn-primary" id="close-order-form--${orderId}--${total}">Close Order</button>
+    <button type="submit" class="btn btn-dark" style="border: solid 2px darkred" id="close-order-form--${orderId}--${total}">Close Order</button>
   </form>
   `;
 
