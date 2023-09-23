@@ -17,9 +17,6 @@ const navBar = () => {
               <a class="nav-link" href="#" id="create-orders-nav-btn">Create an Order</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="item-add-btn">Create Item</a>
-            </li>
-            <li class="nav-item">
             <a class="nav-link" href="#" id="menu-btn">Menu</a>
           </li>
         </ul>
