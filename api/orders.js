@@ -68,14 +68,7 @@ const getSingleOrder = (firebaseKey) => new Promise((resolve, reject) => {
 
 const searchOrders = (searchValue, uid) => new Promise((resolve, reject) => {
   getOrders(uid).then((orders) => {
-    const search = orders.filter((data) => data.name.toLowerCase().includes(searchValue));
-    resolve(search);
-  }).catch(reject);
-});
-
-const searchOrdersByPhone = (searchValue, uid) => new Promise((resolve, reject) => {
-  getOrders(uid).then((orders) => {
-    const search = orders.filter((data) => data.phoneNumber.includes(searchValue));
+    const search = orders.filter((data) => data.name.toLowerCase().includes(searchValue) || data.phoneNumber.includes(searchValue));
     resolve(search);
   }).catch(reject);
 });
@@ -87,5 +80,4 @@ export {
   updateOrders,
   getSingleOrder,
   searchOrders,
-  searchOrdersByPhone
 };
