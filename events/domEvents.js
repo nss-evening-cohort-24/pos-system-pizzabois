@@ -77,12 +77,6 @@ const domEvents = (user) => {
       });
     }
 
-    if (e.target.id.includes('item-card-edit-btn')) {
-      const [, firebaseKey, orderId] = e.target.id.split('--');
-
-      getOrderItemsByOrderId(orderId).then(deleteOrderItem(firebaseKey));
-    }
-
     if (e.target.id.includes('item-payment-btn')) {
       const [, firebaseKey, total] = e.target.id.split('--');
       closeOrders(firebaseKey, total);
