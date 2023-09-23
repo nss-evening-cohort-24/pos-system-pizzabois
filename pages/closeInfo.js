@@ -10,7 +10,7 @@ const closeInfo = async (orderId) => {
         <p>Close Date: ${revenue[0].date || ''}</p>
       </div>
       <div id="closed-order-info">
-        <p>Sales Total: ${revenue[0].total || ''}</p>
+        <p>Tips: ${revenue[0].tips || ''}</p>
         <p>Order Type: ${revenue[0].orderType || ''}</p>
         <p>Pay Type: ${revenue[0].payType || ''}</p>
     </div>
