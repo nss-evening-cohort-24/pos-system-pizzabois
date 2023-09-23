@@ -2,7 +2,6 @@ import { getRevByOrderId } from '../api/revenue';
 import renderToDom from '../utils/renderToDom';
 
 const closeInfo = async (orderId) => {
-  console.warn(orderId);
   const rev = await getRevByOrderId(orderId);
   const revenue = Object.values(rev);
   const domString = `

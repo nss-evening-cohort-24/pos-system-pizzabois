@@ -1,5 +1,4 @@
 import { createRevenue, updateRevenue } from '../api/revenue';
-// import homePage from '../pages/homePage';
 import {
   createOrder, updateOrders, getOrders, getSingleOrder
 } from '../api/orders';
@@ -106,7 +105,6 @@ const formEvents = (user) => {
       updateItem(payload).then(() => {
         getMenuItems().then(menu);
       });
-      // console.warn('click');
     }
   });
 };
