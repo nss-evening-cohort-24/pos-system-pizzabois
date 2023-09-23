@@ -37,3 +37,5 @@ This has many features to allow quick navigation:
 [creationFlowchart](image-7.png)
 
 #Deployment
+https://hiphoppizzawangs-pizzabois.netlify.app
+[loom video] https://www.loom.com/share/ade37f6247da49deac9434696770fb38?sid=2b74975d-82ae-4422-a1fc-78d81d6e078f
