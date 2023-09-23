@@ -2,7 +2,7 @@
   "-NdzhDpqI72kuFBDeHzh": {
     "firebaseKey": "-NdzhDpqI72kuFBDeHzh",
     "name": "Dirk Pegg",
-    "isClosed": true,
+    "isClosed": false,
     "type": "Walk-in",
     "emailAddress": "dpegg0@yellowbook.com",
     "phoneNumber": "806-954-7371",
@@ -11,7 +11,7 @@
   "-NdzhDpw0upVCMwg7O5U": {
     "firebaseKey": "-NdzhDpw0upVCMwg7O5U",
     "name": "Atalanta Bartot",
-    "isClosed": true,
+    "isClosed": false,
     "type": "Call-in",
     "emailAddress": "abartot1@netscape.com",
     "phoneNumber": "984-363-9818",
@@ -20,7 +20,7 @@
   "-NdzhDpyH9nDi-biADYg": {
     "firebaseKey": "-NdzhDpyH9nDi-biADYg",
     "name": "Granger Padgett",
-    "isClosed": true,
+    "isClosed": false,
     "type": "Walk-in",
     "emailAddress": "gpadgett2@mozilla.com",
     "phoneNumber": "663-387-3431",

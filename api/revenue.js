@@ -26,6 +26,17 @@ const updateRevenue = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getRevByOrderId = (orderId) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/revenue.json?orderBy="orderId"&equalTo="${orderId}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  }).then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 const getRevenue = () => new Promise((resolve, reject) => {
   fetch(`${endpoint}/revenue.json`, {
     method: 'GET',
@@ -46,5 +57,6 @@ const getRevenue = () => new Promise((resolve, reject) => {
 export {
   createRevenue,
   updateRevenue,
-  getRevenue
+  getRevenue,
+  getRevByOrderId
 };
