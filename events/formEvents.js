@@ -79,6 +79,7 @@ const formEvents = (user) => {
     if (e.target.id.includes('item-submit')) {
       const payload = {
         itemName: document.querySelector('#item-name').value,
+        itemDescription: document.querySelector('#item-description').value,
         itemPrice: document.querySelector('#item-price').value,
         uid: user.uid
       };
@@ -90,6 +91,22 @@ const formEvents = (user) => {
           getMenuItems().then(menu);
         });
       });
+    }
+
+    if (e.target.id.includes('menu-edit-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      const payload = {
+        itemName: document.querySelector('#item-name').value,
+        itemDescription: document.querySelector('#item-description').value,
+        itemPrice: document.querySelector('#item-price').value,
+        uid: user.uid,
+        firebaseKey
+      };
+
+      updateItem(payload).then(() => {
+        getMenuItems().then(menu);
+      });
+      // console.warn('click');
     }
   });
 };

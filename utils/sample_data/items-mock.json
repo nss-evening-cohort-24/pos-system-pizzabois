@@ -1,38 +1,38 @@
 {
   "-NdzlLlaOavuDjDjZo2L": {
     "firebaseKey": "-NdzlLlaOavuDjDjZo2L",
-    "itemName": "12 pc wings",
-    "itemDescription": "A nice set of waaaangs",
-    "itemPrice": 1.93
+    "itemName": "12pc Wings",
+    "itemDescription": "Set of 12 crispy, juicy, and flavorful wings.",
+    "itemPrice": 12.99
   },
   "-NdzlLlboMgUma7Px_Jd": {
     "firebaseKey": "-NdzlLlboMgUma7Px_Jd",
-    "itemName": "6 piece wings",
-    "itemDescription": "A nice set of waaaangs",
-    "itemPrice": 306.89
+    "itemName": "6pc wings",
+    "itemDescription": "Set of 6 crispy, juicy, and flavorful wings.",
+    "itemPrice": 6.99
   },
   "-NdzlLlboMgUma7Px_Je": {
     "firebaseKey": "-NdzlLlboMgUma7Px_Je",
-    "itemName": "14in cheese pizza",
-    "itemDescription": "A nice 14 inch pizza smothered with cheese",
-    "itemPrice": 113.57
+    "itemName": "14in Cheese Pizza",
+    "itemDescription": "Fluffy dough with smooth mozzarella, in 14 inches.",
+    "itemPrice": 10.99
   },
   "-NdzlLlcOWx-6Rc0qccO": {
     "firebaseKey": "-NdzlLlcOWx-6Rc0qccO",
-    "itemName": "18in cheese pizza",
-    "itemDescription": "A nice 18 inch pizza smothered with cheese",
-    "itemPrice": 353.26
+    "itemName": "18in Cheese Pizza",
+    "itemDescription": "Fluffy dough with smooth mozzarella, in 18 inches.",
+    "itemPrice": 16.99
   },
   "-NdzlLldoKroQScuq9SC": {
     "firebaseKey": "-NdzlLldoKroQScuq9SC",
-    "itemName": "14in pepperoni pizza",
-    "itemDescription": "A nice 14 inch pizza smothered with cheese and pepperoni",
-    "itemPrice": 201.81
+    "itemName": "14in Pepperoni Pizza",
+    "itemDescription": "Fluffy dough, smooth mozzarella, and spicy pepperoni in 14 inches.",
+    "itemPrice": 10.99
   },
   "-NdzlLlecU20yUkVWgps": {
     "firebaseKey": "-NdzlLlecU20yUkVWgps",
-    "itemName": "18in pepperoni pizza",
-    "itemDescription": "A  nice 18 inch pizza smothered with cheese and pepperoni",
-    "itemPrice": 141.03
+    "itemName": "18in Pepperoni Pizza",
+    "itemDescription": "Fluffy dough, smooth mozzarella, and spicy pepperoni in 18 inches.",
+    "itemPrice": 16.99
   }
 }

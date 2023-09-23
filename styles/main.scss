@@ -160,7 +160,7 @@ body {
   }
 
 #menu-container{
-  margin-top: none;
+  margin-top: -60px;
 }
  
  .grid-wrap {
@@ -178,13 +178,13 @@ body {
   margin: auto;
   margin-bottom: 30px;
   font-weight: normal;
-  height: 150px;
+  height: 225px;
   .btn {
     --bs-btn-hover-border-color: #f00000;
   }
 }
 .menu-card-title {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 #menu-item-edit-btn {
   background-color: rgb(0, 0, 0);
@@ -194,7 +194,7 @@ body {
 }
 #menu-create-btn-je {
   width: 320px;
-  height: 40px;
+  height: 70px;
   border: solid 2px rgb(255, 183, 0);
 }
 #menu-title{
