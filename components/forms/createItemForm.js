@@ -15,7 +15,7 @@ const createItemForm = (uid, obj = {}) => {
     <label for="item-price" class="form-label" style="font-size:24px;color:white;">Item Price *</label>
     <input type="text" class="form-control" id="item-price" style="margin: 0 auto;width:332.02px;" placeholder="24.99" value="${obj.itemPrice || ''}" required>
   </div>
-  <button type="submit" class="btn btn-success" id="item-form-submit-btn">${obj.firebaseKey ? 'Update Item' : 'Add Item'}</button>
+  <button type="submit" class="btn btn-dark" style=" border: 2px solid darkred" id="item-form-submit-btn">${obj.firebaseKey ? 'Update Item' : 'Add Item'}</button>
 </form>
   `;
 

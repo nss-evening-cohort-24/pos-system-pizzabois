@@ -16,7 +16,7 @@ const closeOrders = (orderId, total) => {
     </select>
     <div class="mb-3" id="tip-amount">
       <label for="close-order-tip-input" class="form-label">Tip Amount</label>
-      <input type="number" min="1" step="any" class="form-control" id="close-order-tip-input" aria-describedby="emailHelp">
+      <input type="number" min="1" step="any" class="form-control" id="close-order-tip-input" aria-describedby="emailHelp" required>
     </div>
     <div id="tip-auto">
       <p onclick="document.querySelector('#close-order-tip-input').value = (${total} * .1).toFixed(2)">10%</p>
@@ -24,7 +24,7 @@ const closeOrders = (orderId, total) => {
       <p onclick="document.querySelector('#close-order-tip-input').value = (${total} * .2).toFixed(2)">20%</p>
       <p onclick="document.querySelector('#close-order-tip-input').value = (${total} * 1).toFixed(2)">100%</p>
     </div>
-    <button type="submit" class="btn btn-dark" id="close-order-form--${orderId}--${total}">Close Order</button>
+    <button type="submit" class="btn btn-dark" style="border: solid 2px darkred" id="close-order-form--${orderId}--${total}">Close Order</button>
   </form>
   `;
 
