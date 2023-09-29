@@ -1,0 +1,38 @@
+{
+  "-NdzlLlaOavuDjDjZo2L": {
+    "firebaseKey": "-NdzlLlaOavuDjDjZo2L",
+    "itemName": "12pc Wings",
+    "itemDescription": "Set of 12 crispy, juicy, and flavorful wings.",
+    "itemPrice": 12.99
+  },
+  "-NdzlLlboMgUma7Px_Jd": {
+    "firebaseKey": "-NdzlLlboMgUma7Px_Jd",
+    "itemName": "6pc wings",
+    "itemDescription": "Set of 6 crispy, juicy, and flavorful wings.",
+    "itemPrice": 6.99
+  },
+  "-NdzlLlboMgUma7Px_Je": {
+    "firebaseKey": "-NdzlLlboMgUma7Px_Je",
+    "itemName": "14in Cheese Pizza",
+    "itemDescription": "Fluffy dough with smooth mozzarella, in 14 inches.",
+    "itemPrice": 10.99
+  },
+  "-NdzlLlcOWx-6Rc0qccO": {
+    "firebaseKey": "-NdzlLlcOWx-6Rc0qccO",
+    "itemName": "18in Cheese Pizza",
+    "itemDescription": "Fluffy dough with smooth mozzarella, in 18 inches.",
+    "itemPrice": 16.99
+  },
+  "-NdzlLldoKroQScuq9SC": {
+    "firebaseKey": "-NdzlLldoKroQScuq9SC",
+    "itemName": "14in Pepperoni Pizza",
+    "itemDescription": "Fluffy dough, smooth mozzarella, and spicy pepperoni in 14 inches.",
+    "itemPrice": 10.99
+  },
+  "-NdzlLlecU20yUkVWgps": {
+    "firebaseKey": "-NdzlLlecU20yUkVWgps",
+    "itemName": "18in Pepperoni Pizza",
+    "itemDescription": "Fluffy dough, smooth mozzarella, and spicy pepperoni in 18 inches.",
+    "itemPrice": 16.99
+  }
+}
